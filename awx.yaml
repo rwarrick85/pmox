@@ -1,0 +1,12 @@
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+  namespace: awx
+spec:
+  service_type: ClusterIP
+  ingress_type: Ingress
+  ingress_host: awx.totbmllc.com
+  ingress_annotations:
+    kubernetes.io/ingress.class: nginx
+  postgres_storage_class: local-path
